@@ -38,7 +38,7 @@
   &:hover {
       color: darken($color: white, $amount: 20);
   }
-  
+
 }
 
 .journal__entries {
@@ -52,6 +52,7 @@
   border-radius: 20px 5px 5px 20px;
   color: $dark-gray;
   display: flex;
+  justify-content: space-between;
   margin-bottom: 10px;
   margin-right: 10px;
   overflow: hidden;
