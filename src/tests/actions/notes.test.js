@@ -11,8 +11,23 @@ const mockStore = configureStore(middlewares)
 const initState = {
   auth: {
     uid: 'testUID'
+  },
+  notes: {
+    active: {
+      id: 'B06eTstF8i8lOKR6esjE',
+      title: 'titleDemo',
+      body: 'bodyDemo'
+    }
   }
 }
+
+jest.mock('../../helpers/fileUpload', () => ({
+  fileUpload: jest.fn( () => {
+      return 'https://hola-mundo.com/cosa.jpg';
+      // return Promise.resolve('https://hola-mundo.com/cosa.jpg');
+  })
+}))
+
 
 let store = mockStore(initState);
 
@@ -90,4 +105,10 @@ describe('notes.js', () => {
     expect(docRef.data().title).toBe(note.title)
     expect(docRef.data().body).toBe(note.body)
   })
+
+  // test('should update URL entry (startUploading)', async() => {
+  //   const file = new File([], 'picture.jpg')
+  //   await store.dispatch( startUploading(file))
+  // })
+
 })
