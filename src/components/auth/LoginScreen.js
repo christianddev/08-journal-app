@@ -12,8 +12,8 @@ const LoginScreen = () => {
   const { ui: { msgError, loading } } = useSelector(state => state);
 
   const [formValues, handleInputChange] = useForm({
-    email: 'userxd1@email.com',
-    password: '123123'
+    email: '',
+    password: ''
   })
 
   const isFormValid = () => {
@@ -54,6 +54,7 @@ const LoginScreen = () => {
         <input
           type="text"
           placeholder="Email"
+          id="inputEmail"
           name="email"
           className="auth__input"
           autoComplete="off"
@@ -63,6 +64,7 @@ const LoginScreen = () => {
         <input
           type="password"
           placeholder="Password"
+          id="inputPassword"
           name="password"
           className="auth__input"
           autoComplete="off"

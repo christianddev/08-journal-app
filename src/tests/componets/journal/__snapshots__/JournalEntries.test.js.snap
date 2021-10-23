@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`JournalEntries.js should show 1`] = `
+<div
+  className="journal__entries"
+>
+  <div
+    className="journal__entry animate__animated animate__bounce animate__fadeIn animate__faster"
+    onClick={[Function]}
+  >
+    <div
+      className="journal__entry-body"
+    >
+      <p
+        className="journal__entry-title"
+      >
+        titleXD
+      </p>
+      <p
+        className="journal__entry-content"
+      >
+        bodyXD
+      </p>
+    </div>
+    <div
+      className="journal__entry-date-box"
+    >
+      <span>
+        Saturday
+      </span>
+      <h4>
+        23rd
+      </h4>
+    </div>
+  </div>
+</div>
+`;

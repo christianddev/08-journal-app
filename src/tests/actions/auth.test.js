@@ -46,7 +46,7 @@ describe('auth.tets.js', () => {
   test('startLoginWithEmailPassword', async() => {
     const email = 'test@testing.com'
     const password = '123123'
-    const uid = 'WzC5jHlh9cVte3WgTfBrtw08a1J2'
+    const uid = 'qPvMuFoWBOTFmdAAzDeE4sRX9Ol1'
     await store.dispatch(startLoginWithEmailPassword(email, password));
     const actions = store.getActions();
     expect(actions[2]).toEqual({

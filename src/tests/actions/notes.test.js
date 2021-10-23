@@ -41,7 +41,6 @@ describe('notes.js', () => {
     await store.dispatch(startNewNote());
     const uid = store.getState().auth.uid;
     const actions = store.getActions()
-    // console.log('actions', actions)
     expect(actions[0]).toEqual({
       type: types.notesActive,
       payload: {
